@@ -1,0 +1,15 @@
+C:\Users\ethan\Desktop\BlogSite\BlogSolution\Blog.Entity\obj\Debug\net8.0\Blog.Entity.csproj.AssemblyReference.cache
+C:\Users\ethan\Desktop\BlogSite\BlogSolution\Blog.Entity\obj\Debug\net8.0\Blog.Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ethan\Desktop\BlogSite\BlogSolution\Blog.Entity\obj\Debug\net8.0\Blog.Entity.AssemblyInfoInputs.cache
+C:\Users\ethan\Desktop\BlogSite\BlogSolution\Blog.Entity\obj\Debug\net8.0\Blog.Entity.AssemblyInfo.cs
+C:\Users\ethan\Desktop\BlogSite\BlogSolution\Blog.Entity\obj\Debug\net8.0\Blog.Entity.csproj.CoreCompileInputs.cache
+C:\Users\ethan\Desktop\BlogSite\BlogSolution\Blog.Entity\bin\Debug\net8.0\Blog.Entity.deps.json
+C:\Users\ethan\Desktop\BlogSite\BlogSolution\Blog.Entity\bin\Debug\net8.0\Blog.Entity.dll
+C:\Users\ethan\Desktop\BlogSite\BlogSolution\Blog.Entity\bin\Debug\net8.0\Blog.Entity.pdb
+C:\Users\ethan\Desktop\BlogSite\BlogSolution\Blog.Entity\bin\Debug\net8.0\Blog.Core.dll
+C:\Users\ethan\Desktop\BlogSite\BlogSolution\Blog.Entity\bin\Debug\net8.0\Blog.Core.pdb
+C:\Users\ethan\Desktop\BlogSite\BlogSolution\Blog.Entity\obj\Debug\net8.0\Blog.Ent.4E135DA9.Up2Date
+C:\Users\ethan\Desktop\BlogSite\BlogSolution\Blog.Entity\obj\Debug\net8.0\Blog.Entity.dll
+C:\Users\ethan\Desktop\BlogSite\BlogSolution\Blog.Entity\obj\Debug\net8.0\refint\Blog.Entity.dll
+C:\Users\ethan\Desktop\BlogSite\BlogSolution\Blog.Entity\obj\Debug\net8.0\Blog.Entity.pdb
+C:\Users\ethan\Desktop\BlogSite\BlogSolution\Blog.Entity\obj\Debug\net8.0\ref\Blog.Entity.dll

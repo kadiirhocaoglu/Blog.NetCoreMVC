@@ -1,0 +1,96 @@
+﻿@model List<ArticleDto>
+<div class="container-xxl flex-grow-1 container-p-y">
+    <h4 class="fw-bold py-3 mb-4">
+        <span class="text-muted fw-light">Makale Yönetimi /</span> Makaleler
+    </h4>
+    <div class="card">
+        <div class="table-responsive text-nowrap m-5">
+
+   
+                <a class="btn btn-success mb-3" asp-area="Admin" asp-controller="Article" asp-action="Add">
+                    Makale Ekle <i class="bx bx-plus"></i>
+                </a>
+
+
+            <h2>@ViewData["Title"]</h2>
+
+           
+            <table class="table table-bordered" id="articlesTable" width="100%" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Başlık</th>
+                    <th>Yazar</th>
+                    <th>Oluşturulma Tarihi</th>
+                    <th>Kategori</th>
+                    <th>Durum</th>
+                    <th>İşlemler</th>
+                </tr>
+            </thead>
+            <tbody class="table-border-bottom-0">
+                @foreach (var article in Model)
+                {
+                    <tr data-id="@article.Id">
+                        <td>@article.Title</td>
+                        <td>@article.CreatedBy</td>
+                        <td>@article.CreatedDate.ToShortDateString()</td>
+                        <td>@article.Category.Name</td>
+                        <td>@(article.IsDeleted ? "Deleted" : "Active")</td>
+                            <td>
+                                <!-- Düzenleme Bağlantısı -->
+                                <a href="@Url.Action("Update", "Article", new { articleId = article.Id })" class="text-body me-2">
+                                    <button type="button" class="btn btn-primary">
+                                        Düzenle
+                                    </button>
+                                </a>
+
+                                <!-- Silme Butonu -->
+                                <button type="button" class="btn btn-danger" onclick="confirmDelete('@article.Id')">
+                                    Sil
+                                </button>
+                            </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</div>
+@section Scripts {
+    <script src="~/js/articleIndex.js" type="application/ecmascript"></script>
+
+    <script>
+        function confirmDelete(articleId) {
+
+            var modal = new bootstrap.Modal(document.getElementById('confirmDeleteModal'));
+            var form = document.getElementById('deleteForm');
+            var input = document.getElementById('deleteArticleId');
+            form.action = '@Url.Action("SafeDelete", "Article")';
+            input.value = articleId;
+            modal.show();
+        }
+    </script>
+
+}
+
+
+<div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="confirmDeleteModalLabel">Silme Onayı</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Bu makaleyi silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">İptal</button>
+                <form id="deleteForm" method="post" style="display:inline;">
+                    <input type="hidden" name="articleId" id="deleteArticleId" />
+                    <button type="submit" class="btn btn-danger">Sil</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
